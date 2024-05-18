@@ -15,6 +15,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { sidebarLinks } from "@/constants";
+import Footer from "./Footer";
 
 const MobileNav = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -38,12 +39,12 @@ const MobileNav = ({ user }: MobileNavProps) => {
           >
             <Image
               src="/icons/logo.svg"
-              alt="Horizon Logo"
+              alt="Logo"
               width={34}
               height={34}
             />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-              Horizon
+              NeuraPay
             </h1>
           </Link>
           <div className="mobilenav-sheet">
@@ -88,7 +89,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
               </nav>
             </SheetClose>
 
-            FOOTER
+            <Footer user={user} type="mobile" />
           </div>
         </SheetContent>
       </Sheet>
